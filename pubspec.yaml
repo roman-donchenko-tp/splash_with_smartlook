@@ -1,0 +1,32 @@
+name: splash_with_smartlook
+description: "An example to show a defect with Black screen instead of native splash if smartlook is added to pubspec on Android 14"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+  flutter: 3.19.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_native_splash: 2.4.0
+
+  # Remove or comment the line below to see normal splash screen without the bug
+  flutter_smartlook: 4.1.20
+
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+
+
+
+flutter_native_splash:
+  color: "#e1f5fe"
+  image: assets/logo_lockup_flutter_vertical.png
+
+  android_12:
+    image: assets/android12splash.png
+    color: "#42a5f5"
+    icon_background_color: "#eeeeee"
